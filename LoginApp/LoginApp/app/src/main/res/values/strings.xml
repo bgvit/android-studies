@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="LoginTextView">Login</string>
+    <string name="ButtonValidacao">Login</string>
+    <string name="LoginEditText" >Show</string>
+    <string name="mostrarLoginText">Show biz</string>
+    <string name="LoginHint">Login</string>
+</resources>

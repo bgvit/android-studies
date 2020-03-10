@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PayOurDrinks</string>
+    <string name="payOurBills">Pay App!</string>
+    <string name="qtdPeople">Quantas pessoas estão aí?</string>
+    <string name="comidaMultiAuto">Comida</string>
+    <string name="total">Total:</string>
+    <string name="calcButton">Calcular</string>
+</resources>
