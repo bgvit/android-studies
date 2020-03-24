@@ -26,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         String values[] = ((EditText)findViewById(R.id.editTextValues)).getText().toString().split(" ");
 
-        List<Float> nvalues = new ArrayList<>();
+        float[] valoresFloat = new float[values.length];
+        float valorFloat;
 
-        for (int i = 0; i == values.length; i++) {
-            nvalues.add(Float.valueOf(values[i]));
-            total += nvalues.get(i).floatValue();
+        for (int i = 0; i < values.length; i++) {
+            valorFloat = Float.parseFloat(values[i]);
+            valoresFloat[i] = valorFloat;
+            total += valorFloat;
         }
 
         TextView totalText = findViewById(R.id.textViewTotalValor);
