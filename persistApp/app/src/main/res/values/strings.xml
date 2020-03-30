@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginDados</string>
+    <string name="login">login</string>
+    <string name="senha">senha</string>
+    <string name="Shared">Shared</string>
+    <string name="Arquivo">arquivo</string>
+    <string name="sqlite">sqlite</string>
+</resources>
