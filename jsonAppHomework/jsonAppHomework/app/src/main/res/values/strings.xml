@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">jsonApp</string>
+    <string name="latitudeText">latitude</string>
+    <string name="longitudeText">longitude</string>
+    <string name="dataToJson"><![CDATA[>> JSON]]]></string>
+    <string name="jsonToData"><![CDATA[JSON <<]]></string>
+</resources>

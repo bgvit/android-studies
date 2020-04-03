@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">jsonApp</string>
+    <string name="nome_text">nome</string>
+    <string name="telefoneText">telefone</string>
+    <string name="dataToJson"><![CDATA[>> JSON]]]></string>
+    <string name="jsonToData"><![CDATA[JSON <<]]></string>
+</resources>
