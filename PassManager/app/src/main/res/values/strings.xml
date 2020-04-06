@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PassManager</string>
+    <string name="LoginTextView">Login</string>
+    <string name="ButtonValidacao">Login</string>
+    <string name="LoginEditText">Show</string>
+    <string name="mostrarLoginText">Show biz</string>
+    <string name="LoginHint">Login</string>
+    <string name="createRegistryStr">Criar Registro</string>
+    <string name="listRegistry">Listar registro</string>
+    <string name="Salvar">Salvar</string>
+    <string name="Registro">Registro</string>
+    <string name="Senha">Senha</string>
+    <string name="editarRegistro">Editar Registro</string>
+    <string name="PesquisarStr">Pesquisar</string>
+</resources>
