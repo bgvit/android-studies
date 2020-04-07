@@ -2,6 +2,7 @@ package com.example.passmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -25,11 +26,12 @@ public class createRegistryActivity extends AppCompatActivity {
 
         SharedPreferences minhasPreferencias = PreferenceManager.getDefaultSharedPreferences(createRegistryActivity.this);
         SharedPreferences.Editor myEditor = minhasPreferencias.edit();
-        myEditor.putString("REGISTRY", registry);
-        myEditor.putString("LOGIN", login);
-        myEditor.putString("SENHA", senha);
+        myEditor.putString("LOGIN" + registry, login);
+        myEditor.putString("SENHA" + registry, senha);
         myEditor.commit();
         Toast.makeText(this, "SP OK", Toast.LENGTH_LONG).show();
+        Intent CrudActivity = new Intent(this, CrudActivity.class);
+        startActivity(CrudActivity);
         finish();
     }
 }

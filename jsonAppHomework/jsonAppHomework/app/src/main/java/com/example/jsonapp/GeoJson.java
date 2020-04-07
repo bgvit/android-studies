@@ -1,20 +1,18 @@
 package com.example.jsonapp;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class GeoJson {
     String type;
-    Features features;
+    List<Feature> featureList;
     Geometry geometry;
 
     public GeoJson(){
     }
-    public GeoJson(String type, Features features, Geometry geometry){
+
+    public GeoJson(String type, List<Feature> featureList, Geometry geometry){
         this.type = type;
-        this.features = features;
+        this.featureList = featureList;
         this.geometry = geometry;
     }
 
@@ -26,21 +24,22 @@ public class GeoJson {
         this.type = type;
     }
 
-    public Features getFeatures() {
-        return features;
-    }
-
-    public void setFeatures(Features features) {
-        features = features;
-    }
-
     public Geometry getGeometry() {
         return geometry;
     }
     public void setGeometry(Geometry geometry) {
         this.geometry = geometry;
     }
-    /*
+
+    public List<Feature> getFeatureList() {
+        return featureList;
+    }
+
+    public void setFeatureList(List<Feature> featureList) {
+        this.featureList = featureList;
+    }
+
+/* MODELO DE JSON
     {
   "type": "FeatureCollection",
   "features": [

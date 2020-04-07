@@ -17,8 +17,7 @@ public class CrudActivity extends AppCompatActivity {
     public void AcessoCreateRegistry(View v) {
 
         Intent createRegistryActivity = new Intent(this, createRegistryActivity.class);
-        startActivityForResult(createRegistryActivity, 1);
-        /*startActivity(createRegistryActivity);*/
+        startActivity(createRegistryActivity);
         finish();
     }
     public void AcessoSearchByRegistry(View v) {

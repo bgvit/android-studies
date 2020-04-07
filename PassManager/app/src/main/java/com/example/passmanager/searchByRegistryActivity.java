@@ -29,5 +29,7 @@ public class searchByRegistryActivity extends AppCompatActivity {
 
         login.setText(loginString, TextView.BufferType.NORMAL);
         senha.setText(senhaString, TextView.BufferType.NORMAL);
+
+
     }
 }

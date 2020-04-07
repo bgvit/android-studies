@@ -4,9 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class Features {
+public class Feature {
     String type;
     Set<String> properties = new HashSet<String>();
+    Geometry geometry;
 
     public String getType() {
         return type;
@@ -26,3 +27,21 @@ public class Features {
 }
 
 
+    /*
+    {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17156225442886,
+          -22.90876700878904
+        ]
+      }
+    }
+  ]
+}
+    * */
