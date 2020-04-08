@@ -18,11 +18,12 @@ public class searchByRegistryActivity extends AppCompatActivity {
     }
 
     public void searchByRegistry(View v){
+
         String registry = ((EditText)findViewById(R.id.RegistryeditText)).getText().toString();
         SharedPreferences myPreferences = PreferenceManager.getDefaultSharedPreferences(searchByRegistryActivity.this);
 
-        String loginString = myPreferences.getString("LOGIN", "unknown");
-        String senhaString = myPreferences.getString("SENHA", "unknown");
+        String loginString = myPreferences.getString("LOGIN"+registry, "unknown");
+        String senhaString = myPreferences.getString("SENHA"+registry, "unknown");
 
         EditText login = ((EditText)findViewById(R.id.LogineditText));
         EditText senha = ((EditText)findViewById(R.id.PasswordeditText));
