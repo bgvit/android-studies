@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Minhaapp</string>
-    <string name="loginText">Login</string>
-    <string name="senhaText">Senha</string>
-    <string name="buttonText">OK</string>
-    <string name="nomeHint">Nome</string>
-    <string name="senhaHint">Senha</string>
-</resources>

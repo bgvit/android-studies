@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">fuelService</string>
+    <string name="titleText">Consumo de Combustível</string>
+    <string name="kmText">km</string>
+    <string name="litrosText">Litros</string>
+    <string name="litrosGastosText">Litros gastos</string>
+    <string name="calcular">Calcular</string>
+    <string name="Resultado">KM/L</string>
+</resources>
