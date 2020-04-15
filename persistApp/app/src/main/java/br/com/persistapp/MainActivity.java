@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         String login = ((EditText)findViewById(R.id.login)).getText().toString();
         String senha = ((EditText)findViewById(R.id.senha)).getText().toString();
 
+
         SharedPreferences myPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         String loginString = myPreferences.getString("LOGIN", "unknown");
         String senhaString = myPreferences.getString("SENHA", "unknown");

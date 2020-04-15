@@ -1,29 +1,26 @@
 package br.edu.unicarioca.foto;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
-import android.media.ImageReader;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    String currentPhotoPath;
-    File storageDir = getFilesDir();
+    Bitmap b;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,34 +39,28 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imagem = (Bitmap) extras.get("data");
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            b = imageBitmap;
             ImageView canvas = (ImageView)findViewById(R.id.canvas);
-            canvas.setImageBitmap(imagem);
+            canvas.setImageBitmap(imageBitmap);
         }
     }
-
     public void acaoFoto(View v){
         dispararFoto();
     }
 
-    public void salvar(View v) throws IOException {
-        File imgArchive = new File(storageDir, "img.png");
+    public void fotoSalvar(View v) throws IOException {
+        FileOutputStream outStream = new FileOutputStream(createImageFile());
+        b.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+        outStream.close();
+        Toast.makeText(this, "Foto Salva com Sucesso", Toast.LENGTH_SHORT).show();
     }
 
     private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "PNG_" + timeStamp + "_";
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".png",         /* suffix */
-                storageDir      /* directory */
-        );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        currentPhotoPath = image.getAbsolutePath();
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        String nomeArquivo = ( (EditText) findViewById(R.id.nomeFoto)).getText().toString();
+        File image = new File(storageDir, nomeArquivo + ".png");
         return image;
     }
-
 
 }
