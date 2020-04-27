@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginWithServiceAndAuthByRequest</string>
+    <string name="WelcomeText">Seja bem-vindo</string>
+    <string name="LoginText">Login</string>
+    <string name="SenhaText">Senha</string>
+    <string name="signinText">Sign In</string>
+</resources>
