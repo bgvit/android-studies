@@ -1,8 +1,5 @@
 package br.com.example.loginwithserviceandauthbyrequest;
 
-
-import java.io.Serializable;
-
 public class Acesso {
     private String Login;
     private String Senha;

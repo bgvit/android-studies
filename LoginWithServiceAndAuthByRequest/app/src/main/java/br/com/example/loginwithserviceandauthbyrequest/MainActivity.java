@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         System.out.println(login);
         System.out.println(senha);
         String status = logar.validar(login, senha) ? "Acesso Autorizado" : "Erro";
+        if (status == "Acesso Autorizado") {
+            Intent menuIntent = new Intent(this, Menu.class);
+            startActivity(menuIntent);
+        }
         System.out.println(status);
         Toast.makeText(this, status, Toast.LENGTH_SHORT).show();
     }

@@ -103,6 +103,5 @@ public class ServiceLogin extends Service {
             return true;
 
         return false;
-
     }
 }
